@@ -1,0 +1,85 @@
+/* South Asian invitation: a scalloped palace arch and block-print florals. */
+.hero {
+  min-height: 960px;
+  padding: 38px 20px 30px;
+  background: var(--paper);
+  color: var(--wine);
+  border: 12px solid var(--wine);
+  border-bottom-width: 0;
+}
+.hero::before, .hero::after {
+  inset: auto;
+  top: 75px;
+  bottom: 30px;
+  width: clamp(130px, 20vw, 280px);
+  background: url('assets/wedding-floral.svg') center bottom / contain no-repeat;
+  mask-image: none;
+  opacity: .6;
+}
+.hero::before { left: 3%; }
+.hero::after { right: 3%; transform: scaleX(-1); }
+.hero-caption {
+  color: var(--wine);
+  letter-spacing: 3.5px;
+  font-size: 9px;
+  margin-bottom: 14px;
+  position: relative;
+  z-index: 1;
+}
+.invitation-card {
+  width: 600px;
+  min-height: 780px;
+  padding: 140px 88px 66px;
+  background: transparent;
+  box-shadow: none;
+  transform: none;
+  position: relative;
+  z-index: 1;
+}
+.arch-frame { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; }
+.card-inner {
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  border-radius: 0;
+  background: transparent;
+}
+.hero-blessing { font: 36px var(--script); margin: 0 0 18px; }
+.hero .eyebrow { font-size: 8px; letter-spacing: 2px; margin: 0 0 34px; }
+.hero h1 { font-size: 70px; font-weight: 400; letter-spacing: -1.8px; }
+.hero h1 i { font-size: 43px; margin: 10px 0 0; }
+.hero .card-copy { font-size: 21px; margin: 28px 0 23px; }
+.hero .date-line strong { font-size: 50px; }
+.hero .date-line span { font-size: 8px; }
+.hero .year { margin-bottom: 22px; }
+.hero .card-foot { font-size: 17px; }
+.hero .scroll-cue { color: var(--wine); margin-top: 8px; position: relative; z-index: 1; }
+@media (max-width: 900px) {
+  .hero::before { left: -35px; }
+  .hero::after { right: -35px; }
+  .hero::before, .hero::after { opacity: .3; }
+}
+@media (max-width: 700px) {
+  .hero { min-height: 795px; padding: 28px 4px 24px; border-width: 6px; border-bottom-width: 0; }
+  .hero-caption { font-size: 7px; letter-spacing: 2.5px; margin-bottom: 12px; }
+  .invitation-card { width: 430px; min-height: 675px; padding: 115px 51px 60px; }
+  .hero-blessing { font-size: 29px; margin-bottom: 20px; }
+  .hero .eyebrow { font-size: 6px; letter-spacing: 1.4px; margin-bottom: 29px; }
+  .hero h1 { font-size: clamp(43px, 12vw, 58px); letter-spacing: -1px; }
+  .hero h1 i { font-size: 36px; margin: 9px 0 0; }
+  .hero .card-copy { font-size: 18px; margin: 24px 0 22px; }
+  .hero .date-line { gap: 15px; }
+  .hero .date-line span { min-width: 51px; font-size: 6px; letter-spacing: 1px; }
+  .hero .date-line strong { font-size: 43px; }
+  .hero .year { font-size: 8px; margin-bottom: 23px; }
+  .hero .card-foot { font-size: 15px; }
+  .hero .scroll-cue { font-size: 7px; letter-spacing: 2px; margin-top: 10px; }
+  .hero::before, .hero::after { width: 145px; top: 95px; opacity: .15; }
+  .hero::before { left: -75px; }
+  .hero::after { right: -75px; }
+}
+@media (max-width: 360px) {
+  .invitation-card { padding-left: 43px; padding-right: 43px; }
+  .hero .card-foot { font-size: 13px; }
+}

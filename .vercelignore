@@ -1,0 +1,6 @@
+.preview-profile*
+.reference
+preview-*.png
+README.md
+.gitignore
+.tools

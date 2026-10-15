@@ -1,0 +1,7 @@
+.preview-profile*/
+.reference/
+preview-*.png
+.vercel/
+.tools/
+
+.vercel
